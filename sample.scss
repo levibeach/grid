@@ -116,7 +116,7 @@ hr {
 ------------------------------------------------------------------------------ */
 .grid4 {
   @include grid-container;
-  @include grid(1, 2, 3, 4, 2);
+  @include grid(1, 2, 3, 1, 2);
   .grid-item {
     @extend %grid-block;
   }
