@@ -1,0 +1,160 @@
+/* ------------------------------------------------------------------------------
+  Imports
+------------------------------------------------------------------------------ */
+// get our grid stuff because that's why we're here!
+@import '_grid.scss';
+
+// including Sass MQ because... it’s pretty great!
+@import 'node_modules/sass-mq/_mq.scss';
+
+/* ------------------------------------------------------------------------------
+  Variables
+------------------------------------------------------------------------------ */
+$color-primary: blue;
+
+// Grid configuration
+$grid-gutters: 24px !global;
+$grid-columns: 12 !global;
+$grid-children: '.grid-item' !global;
+
+%grid-block {
+  background-color: $color-primary;
+  height: 100px;
+  margin-bottom: $grid-gutters;
+}
+
+/* ------------------------------------------------------------------------------
+  Typography
+------------------------------------------------------------------------------ */
+// grabbing a great monospaced font from Google
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,100,700,500,400italic,100italic,300,300italic,500italic,700italic);
+
+body {
+  font-family: Roboto Mono, monospace;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5%;
+  color: $color-primary;
+}
+h1 {
+  font-size: 100px;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 300;
+  font-size: 2em;
+}
+hr {
+  border-top: 1px solid rgba($color-primary,.25);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+/* ------------------------------------------------------------------------------
+  Example #1 - 12 columns
+------------------------------------------------------------------------------ */
+.grid1 {
+  @include grid-container;
+}
+
+%grid1-item {
+  @include grid-col(1);
+}
+
+@for $i from 1 through 12 {
+  .grid1-item-#{$i} {
+    @extend %grid-block;
+    @extend %grid1-item;
+    @if $i == 12 {
+      @include grid-col-omega;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------------
+  Example #2 - Column spanning
+------------------------------------------------------------------------------ */
+.grid2 {
+  @include grid-container;
+}
+.grid2-item-6 {
+  @extend %grid-block;
+  @include grid-col(6);
+  &+ .grid2-item-6 {
+    @include grid-col-omega;
+  }
+}
+.grid2-item-3 {
+  @extend %grid-block;
+  @include grid-col(3);
+  &+ .grid2-item-3 + .grid2-item-3 + .grid2-item-3 {
+    @include grid-col-omega;
+  }
+}
+.grid2-item-4 {
+  @extend %grid-block;
+  @include grid-col(4);
+  &+ .grid2-item-4 + .grid2-item-4 {
+    @include grid-col-omega;
+  }
+}
+
+/* ------------------------------------------------------------------------------
+  Example #3 - Repeating
+------------------------------------------------------------------------------ */
+.grid3 {
+  @include grid-container;
+  @include grid(1, 2, 3, 6);
+  .grid-item {
+    @extend %grid-block;
+  }
+}
+
+/* ------------------------------------------------------------------------------
+  Example #4 - Random-looking
+------------------------------------------------------------------------------ */
+.grid4 {
+  @include grid-container;
+  @include grid(1, 2, 3, 4, 2);
+  .grid-item {
+    @extend %grid-block;
+  }
+}
+
+/* ------------------------------------------------------------------------------
+  Example #5 - No gutters
+------------------------------------------------------------------------------ */
+.grid5 {
+  $grid-gutters: 0px !global;
+  @include grid-container;
+  @include grid(4, 4, 4);
+  .grid-item {
+    @extend %grid-block;
+    border: 1px solid white;
+    margin-bottom: 0; // have to manually overide this because we set it early
+  }
+}
+
+/* ------------------------------------------------------------------------------
+  Example #6 - Responsive
+------------------------------------------------------------------------------ */
+.grid6 {
+  $grid-gutters: 24px !global; // resetting the gutters
+  @include grid-container;
+  @include mq($until: tablet) {
+    @include grid(12);
+  }
+  @include mq($from:tablet,$until: desktop) {
+    @include grid(6, 6);
+  }
+  @include mq($from:desktop) {
+    @include grid(4, 4, 4);
+  }
+  .grid-item {
+    // not gonna extend this one
+    background-color: $color-primary;
+    height: 100px;
+    margin-bottom: $grid-gutters;
+  }
+}
