@@ -21,6 +21,9 @@ $grid-children: '.grid-item' !global;
   background-color: $color-primary;
   height: 100px;
   margin-bottom: $grid-gutters;
+  @include mq($until:tablet) {
+    height: 25px;
+  }
 }
 
 /* ------------------------------------------------------------------------------
@@ -44,6 +47,10 @@ h1 {
 h2 {
   font-weight: 300;
   font-size: 2em;
+  @include mq($until:tablet) {
+    font-weight: 500;
+    font-size: 1em;
+  }
 }
 hr {
   border-top: 1px solid rgba($color-primary,.25);
