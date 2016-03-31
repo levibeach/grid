@@ -8,7 +8,7 @@
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
-Grid is a library created by [Levi Beach](http://levibeach.com) and based on a system by [Hugo Giraudel](https://github.com/HugoGiraudel). It relies on [`calc()`](http://caniuse.com/#search=calc) and [advanced CSS selectors](http://caniuse.com/#feat=css-sel3).
+Grid is a collection of mixins and variables based on a system by [Hugo Giraudel](https://github.com/HugoGiraudel) to create your own css grid framework from scratch quickly. It relies on [`calc()`](http://caniuse.com/#search=calc) and [advanced CSS selectors](http://caniuse.com/#feat=css-sel3).
 
 ---
 
@@ -55,3 +55,6 @@ Sets the number of columns to run the column/gutter calculations against.
 
 ###### $grid-children `div`
 Sets the element that will be used when running the `grid()` mixin.
+
+## Demo
+You can see it in action [here](https://levibeach.github.io/grid).
