@@ -152,16 +152,23 @@ hr {
   @include mq($until: tablet) {
     @include grid(12);
   }
-  @include mq($from:tablet,$until: desktop) {
+  @include mq($from:tablet,$until:desktop) {
     @include grid(6, 6);
   }
-  @include mq($from:desktop) {
+  @include mq($from:desktop,$until:wide) {
     @include grid(4, 4, 4);
+  }
+  @include mq($from:wide) {
+    @include grid(3, 3, 3, 3);
   }
   .grid-item {
     // not gonna extend this one
     background-color: $color-primary;
     height: 100px;
     margin-bottom: $grid-gutters;
+    @include mq($until:tablet) {
+      margin-bottom: 6px;
+      height: 25px;
+    }
   }
 }
