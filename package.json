@@ -1,26 +1,8 @@
 {
-  "name": "grid",
+  "name": "lmbgrid",
   "version": "0.1.0",
-  "description": "Simple framework for creating responsive grid systems",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/levibeach/grid.git"
-  },
-  "keywords": [
-    "grid",
-    "sass",
-    "framework"
-  ],
-  "author": "Levi Beach",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/levibeach/grid/issues"
-  },
-  "homepage": "https://github.com/levibeach/grid#readme",
+  "description": "Simple framework for creating css grid systems",
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
@@ -29,5 +11,24 @@
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "sass-mq": "^3.2.9"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levibeach/grid.git"
+  },
+  "keywords": [
+    "sass",
+    "css",
+    "framework",
+    "grid"
+  ],
+  "author": "Levi Beach <hello@levibeach.com> (http://levibeach.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levibeach/grid/issues"
+  },
+  "homepage": "https://levibeach.github.iom/grid"
 }
