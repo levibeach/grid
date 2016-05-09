@@ -20,12 +20,6 @@ $grid-gutters: 10px !default;
 $grid-columns: 12 !default;
 $grid-children: 'div' !default;
 
-// Need to make sure that we are dealing with bordered-box sizing
-// otherwise things will get crazy.
-%grid-bb {
-  box-sizing: border-box;
-}
-
 // Include one of these on the grid's parent element/wrapper
 @mixin grid-container {
   overflow: hidden;
@@ -64,7 +58,7 @@ has 4 columns and the layout will be something like this:
 
   // Set styles for the child element
   &> #{$grid-children} {
-    @extend %grid-bb;
+    box-sizing: border-box;
     float: left;
     margin-right: $grid-gutters;
 
@@ -84,8 +78,8 @@ has 4 columns and the layout will be something like this:
 
 // For those moments when you just need to align an element to the grid...
 @mixin grid-col($cols) {
-  @extend %grid-bb;
   $multiplier: $cols / $grid-columns;
+  box-sizing: border-box;
   float: left;
   margin-right: $grid-gutters;
   width: calc(100% * #{$multiplier} - #{$grid-gutters} * (1 - #{$multiplier}));
