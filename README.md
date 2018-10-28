@@ -8,7 +8,7 @@
 ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
-Grid is a collection of mixins and variables based on a system by [Hugo Giraudel](https://github.com/HugoGiraudel) to create your own css grid framework from scratch quickly. It relies on [`calc()`](http://caniuse.com/#search=calc) and [advanced CSS selectors](http://caniuse.com/#feat=css-sel3).
+Grid is a collection of mixins and variables to create your own css layout framework quickly. It relies on [`calc()`](http://caniuse.com/#search=calc) and [advanced CSS selectors](http://caniuse.com/#feat=css-sel3).
 
 ---
 
@@ -38,12 +38,7 @@ Or you can also just do one-off columns like this:
 ```
 .grid-column-element {
   @include grid-col(6);
-  &:last-child {
-    @include grid-col-omega;
-  }
 }
-```
-As you can see above we're using `grid-col-omega();` to remove the gutter from the last column in the 2 column row.
 
 ## Variables
 
