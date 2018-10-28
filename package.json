@@ -1,6 +1,6 @@
 {
   "name": "lmbgrid",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "Simple framework for creating css grid systems",
   "dependencies": {},
   "devDependencies": {
@@ -13,6 +13,7 @@
     "sass-mq": "^3.2.9"
   },
   "scripts": {
+    "serve": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
