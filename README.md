@@ -39,7 +39,7 @@ Or you can also just do one-off columns like this:
 .grid-column-element {
   @include grid-col(6);
 }
-
+```
 ## Variables
 
 ###### $grid-gutters `10px`
