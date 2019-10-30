@@ -1,5 +1,5 @@
 {
-  "name": "lmbgrid",
+  "name": "@levibeach/grid",
   "version": "1.0.1",
   "description": "Simple framework for creating css grid systems",
   "dependencies": {},
@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/levibeach/grid/issues"
   },
-  "homepage": "https://levibeach.github.iom/grid",
+  "homepage": "https://levibeach.github.io/grid",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
