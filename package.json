@@ -1,6 +1,6 @@
 {
   "name": "@levibeach/grid",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simple framework for creating css grid systems",
   "dependencies": {},
   "devDependencies": {
