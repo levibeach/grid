@@ -13,7 +13,7 @@ Grid is a collection of mixins and variables to create your own css layout frame
 ---
 
 ## Setup
-1. Clone the repo or `npm install lmbgrid`
+1. Clone the repo or `npm install @levibeach/grid`
 2. Include the `_grid.scss` file in your Sass
 
 ## Usage
