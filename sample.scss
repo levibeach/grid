@@ -144,6 +144,7 @@ a {
 /* ------------------------------------------------------------------------------
   Example #6 - Responsive
 ------------------------------------------------------------------------------ */
+// Example uses mq - https://github.com/sass-mq/sass-mq
 .grid6 {
   $grid-gutters: 24px !global; // resetting the gutters
   @include grid-container;
